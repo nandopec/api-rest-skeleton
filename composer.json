@@ -1,0 +1,31 @@
+{
+    "name": "nandopec/api-rest-skeleton",
+    "description": "Estructura base para crear un API RESTful sobre el framework Slim 4 y el patrón de arquitectura de software ADR (Action Domain Responder).",
+    "keywords": [
+        "api",
+        "rest",
+        "slim4",
+        "adr"
+    ],
+    "homepage": "https://github.com/nandopec/api-rest-skeleton",
+    "authors": [
+        {
+            "name": "Fernando Pérez Castillo",
+            "email": "nandopec.23@gmail.com",
+            "homepage": "https://fernando-perez.xyz"
+        }
+    ],
+    "require": {
+        "slim/slim": "4.*",
+        "slim/psr7": "^1.1",
+        "php-di/php-di": "^6.1",
+        "monolog/monolog": "^2.0",
+        "selective/validation": "^0.8.0",
+        "illuminate/database": "^7.10"
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "src/"
+        }
+    }
+}
