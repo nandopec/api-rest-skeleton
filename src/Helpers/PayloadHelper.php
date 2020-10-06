@@ -15,16 +15,16 @@ class PayloadHelper implements JsonSerializable {
     private $data;
 
     /**
-     * @var ErrorHelper|null
+     * @var string|array|object|null
      */
     private $error;
 
     /**
-     * @param int                   $statusCode
-     * @param array|object|null     $data
-     * @param ErrorHelper|null            $error
+     * @param int                       $statusCode
+     * @param array|object|null         $data
+     * @param string|array|object|null  $error
      */
-    public function __construct(int $statusCode = 200, $data = null, ?ErrorHelper $error = null) {
+    public function __construct(int $statusCode = 200, $data = null, $error = null) {
         $this->statusCode = $statusCode;
         $this->data = $data;
         $this->error = $error;
@@ -38,16 +38,16 @@ class PayloadHelper implements JsonSerializable {
     }
 
     /**
-     * @return array|null|object
+     * @return array|object|null
      */
     public function getData() {
         return $this->data;
     }
 
     /**
-     * @return ErrorHelper|null
+     * @return string|array|object|null
      */
-    public function getError(): ?ErrorHelper {
+    public function getError() {
         return $this->error;
     }
 

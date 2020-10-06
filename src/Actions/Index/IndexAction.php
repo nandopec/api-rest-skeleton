@@ -1,10 +1,12 @@
 <?php
 namespace App\Actions\Index;
 
-use App\Actions\Action;
-use Psr\Http\Message\ServerRequestInterface;
 use Psr\Http\Message\ResponseInterface;
-/*use App\Factories\LoggerFactory;
+use Psr\Http\Message\ServerRequestInterface;
+
+use App\Actions\Action;
+/*use App\Exceptions\NotFoundException;
+use App\Factories\LoggerFactory;
 use Selective\Validation\ValidationResult;
 use Selective\Validation\Exception\ValidationException;*/
 
@@ -16,8 +18,12 @@ class IndexAction extends Action {
     }*/
 
     protected function action(): ResponseInterface {
+
         $responseBody = "Hello world!";
         return $this->respondWithData($responseBody);
+
+        // Exception use
+        //throw new NotFoundException("User not found");
 
         // Logger use:
         /*$this->_loggerFactory->info("Hello logger");*/
