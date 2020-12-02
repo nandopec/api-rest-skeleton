@@ -23,7 +23,7 @@ class IndexAction extends Action {
         return $this->respondWithData($responseBody);
 
         // Exception use
-        //throw new NotFoundException("User not found");
+        //throw new NotFoundException(USER_NOT_FOUND);
 
         // Logger use:
         /*$this->_loggerFactory->info("Hello logger");*/

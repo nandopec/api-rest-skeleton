@@ -19,10 +19,9 @@ class ErrorValidationHandler implements TransformerInterface {
             $errorDetails = $this->getErrorDetails($errors);
         }
         $error = [];
-        $error['statusCode'] = 422;
         $error['error'] = [
-            'type' => 'UNPROCESSABLE_ENTITY',
-            'message' => $errorDetails
+            'code' => INVALID_FIELDS,
+            'data' => $errorDetails
         ];
         return $error;
     }
