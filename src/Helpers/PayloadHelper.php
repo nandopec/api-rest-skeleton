@@ -5,11 +5,6 @@ use JsonSerializable;
 
 class PayloadHelper implements JsonSerializable {
     /**
-     * @var int
-     */
-    private $statusCode;
-
-    /**
      * @var array|object|null
      */
     private $data;
@@ -20,21 +15,12 @@ class PayloadHelper implements JsonSerializable {
     private $error;
 
     /**
-     * @param int                       $statusCode
      * @param array|object|null         $data
      * @param string|array|object|null  $error
      */
-    public function __construct(int $statusCode = 200, $data = null, $error = null) {
-        $this->statusCode = $statusCode;
+    public function __construct($data = null, $error = null) {
         $this->data = $data;
         $this->error = $error;
-    }
-
-    /**
-     * @return int
-     */
-    public function getStatusCode(): int {
-        return $this->statusCode;
     }
 
     /**
@@ -55,7 +41,7 @@ class PayloadHelper implements JsonSerializable {
      * @return array
      */
     public function jsonSerialize(): array {
-        $payload = ['statusCode' => $this->statusCode];
+        $payload = [];
         if ($this->data !== null) {
             $payload['data'] = $this->data;
         } elseif ($this->error !== null) {

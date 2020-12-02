@@ -19,7 +19,7 @@ class HttpErrorHandler extends ErrorHandler {
     protected function respond(): ResponseInterface {
         $exception = $this->exception;
         $statusCode = 500;
-        $message = 'An internal error has occurred while processing your request.';
+        $message = INTERNAL_SERVER_ERROR;
         if(
             $exception instanceof ForbiddenException ||
             $exception instanceof InternalServerErrorException ||
@@ -31,7 +31,7 @@ class HttpErrorHandler extends ErrorHandler {
             $message = $exception->getMessage();
             $statusCode = $exception->getCode();
         }
-        $payload = new PayloadHelper($statusCode, null, $message);
+        $payload = new PayloadHelper(null, $message);
         $encodedPayload = json_encode($payload, JSON_PRETTY_PRINT);
         $response = $this->responseFactory->createResponse($statusCode);
         $response->getBody()->write($encodedPayload);

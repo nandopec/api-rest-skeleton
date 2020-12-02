@@ -52,7 +52,7 @@ abstract class Action {
      * @return Response
      */
     protected function respondWithData($data = null): Response {
-        $payload = new PayloadHelper(200, $data);
+        $payload = new PayloadHelper($data);
         return $this->respond($payload);
     }
 
