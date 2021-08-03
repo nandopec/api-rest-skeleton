@@ -25,8 +25,6 @@ abstract class Action {
         $this->response = $response;
         $this->args = $args;
         $this->requestBody = ($request->getParsedBody() !== null) ? $request->getParsedBody() : [];
-        return $this->action();
-
         $this->args = $args;
         $this->requestBody = ($request->getParsedBody() !== null) ? $request->getParsedBody() : [];
         $this->request = $request;

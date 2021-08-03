@@ -6,7 +6,9 @@ date_default_timezone_set('America/Mexico_City');
 require __DIR__ . '/../vendor/autoload.php';
 
 // Adding global constant
+require __DIR__ . '/../config/constants.php';
 require __DIR__ . '/../config/errorCodes.php';
+require __DIR__ . '/../config/tableNames.php';
 
 // Config dependencies
 $containerBuilder = new ContainerBuilder();
