@@ -1,13 +1,14 @@
 {
-    "name": "nandopec/api-rest-skeleton",
-    "description": "Estructura base para crear un API RESTful sobre el framework Slim 4 y el patrón de arquitectura de software ADR (Action Domain Responder).",
+    "name": "nandopec/agenthos-notifications",
+    "description": "API REST para gestionar las notificaciones generadas desde el sistema Agenthos.",
     "keywords": [
         "api",
         "rest",
         "slim4",
-        "adr"
+        "adr",
+        "agenthos"
     ],
-    "homepage": "https://github.com/nandopec/api-rest-skeleton",
+    "homepage": "https://github.com/atombits/agenthos-notifications",
     "authors": [
         {
             "name": "Fernando Pérez Castillo",

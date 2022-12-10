@@ -1,6 +1,6 @@
 <?php
 return [
-    'basePath' => '/nandopec/api-rest-skeleton',
+    'basePath' => '/atombits/agenthos-notifications/v1',
     'displayErrors' => false,
     'clientServer' => 'http://localhost:4200',
     // Loger settings
